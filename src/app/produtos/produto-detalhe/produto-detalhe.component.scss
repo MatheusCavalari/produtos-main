@@ -1,0 +1,26 @@
+.product-details {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  line-height: 1.5; /* Aumenta o espaçamento entre as linhas */
+}
+
+.product-details h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.product-details p {
+  font-size: 26px;
+  margin-bottom: 10px; /* Aumenta o espaçamento entre os parágrafos */
+}
+
+.product-details .description {
+  font-style: italic;
+}
+
+.product-details strong {
+  font-weight: bold;
+}
