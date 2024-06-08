@@ -3,16 +3,16 @@
     <!-- Container para centralizar os botões -->
     <div class="button-container">
       <!-- Botões à esquerda -->
-      <div class="left-buttons" *ngIf="currentRoute !== '/'">
+      <div class="left-buttons" *ngIf="!['/', '/login', '/cadastro'].includes(currentRoute)">
         <button routerLink="/" mat-button>Produtos</button>
         <button mat-button>Cadastrar Novo Produto</button>
       </div>
       <!-- Espaçador flexível -->
       <div class="spacer"></div>
       <!-- Botões à direita -->
-      <div class="right-buttons" *ngIf="currentRoute === '/'">
-        <button routerLink="/" mat-raised-button color="primary" >CADASTRE-SE</button>
-        <button routerLink="/login" mat-stroked-button >LOGIN</button>
+      <div class="right-buttons">
+        <button routerLink="/cadastro" *ngIf="['/', '/login'].includes(currentRoute)" mat-raised-button color="primary" >CADASTRE-SE</button>
+        <button routerLink="/login"  *ngIf="['/', '/login', '/cadastro'].includes(currentRoute)" mat-stroked-button >LOGIN</button>
       </div>
     </div>
   </mat-toolbar>

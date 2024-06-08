@@ -3,12 +3,15 @@ import { RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProdutoComponent } from './produto.component';
+import { ProdutoComponent } from './produto/produto.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
 
 @NgModule({
   declarations:[
-    ProdutoComponent
+    ProdutoComponent,
+    ProdutoDetalheComponent
+
   ],
   imports: [
     CommonModule,
@@ -18,7 +21,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     ReactiveFormsModule
   ],
   exports: [
-    ProdutoComponent
+    ProdutoComponent,
+    ProdutoDetalheComponent
   ]
 })
 
