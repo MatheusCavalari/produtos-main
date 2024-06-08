@@ -5,20 +5,23 @@ import { Produto } from 'src/app/core/material/types/produto';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProdutoService {
-
   private apiUrl: string = environment.apiProdutoUrl;
 
-  constructor(
-    private httpClient: HttpClient
-  ) { }
+  constructor(private httpClient: HttpClient) {}
 
-  listar () : Observable<any[]> {
-    console.log(
-     this.httpClient.get<any[]>(`${this.apiUrl}/v1/cliente`));
+  listar(): Observable<any[]> {
+    console.log(this.httpClient.get<any[]>(`${this.apiUrl}/v1/cliente`));
     return this.httpClient.get<any[]>(`${this.apiUrl}/v1/cliente`);
-    }
+  }
 
+  getClienteById(id: string): Observable<any> {
+    console.log(id);
+    console.log(
+      this.httpClient.get<any>(`${this.apiUrl}/v1/cliente/cpf/${id}`)
+    );
+    return this.httpClient.get<any>(`${this.apiUrl}/v1/cliente/cpf/${id}`);
+  }
 }
