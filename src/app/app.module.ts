@@ -11,6 +11,7 @@ import { ProdutoModule } from './produtos/produto/produto.module';
 import { LoginComponent } from './autenticacao/login/login.component';
 import { ContainerComponent } from './shared/container/container.component';
 import { AutenticacaoModule } from './autenticacao/autenticacao.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AutenticacaoModule } from './autenticacao/autenticacao.module';
     SharedModule,
     MaterialModule,
     ProdutoModule,
-    AutenticacaoModule
+    AutenticacaoModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
