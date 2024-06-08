@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './core/material/material.module';
-import { SharedModule } from './shared/header/shared.module';
+import { SharedModule } from './shared/shared.module';
 import { ProdutoComponent } from './produtos/produto/produto.component';
 import { ProdutoModule } from './produtos/produto/produto.module';
 import { LoginComponent } from './autenticacao/login/login.component';
+import { ContainerComponent } from './shared/container/container.component';
 
 @NgModule({
   declarations: [
