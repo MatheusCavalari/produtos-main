@@ -1,1 +1,19 @@
-<p>header works!</p>
+<header class="app-header">
+  <mat-toolbar>
+    <!-- Container para centralizar os botões -->
+    <div class="button-container">
+      <!-- Botões à esquerda -->
+      <div class="left-buttons">
+        <button routerLink="/" mat-button>Produtos</button>
+        <button mat-button>Cadastrar Novo Produto</button>
+      </div>
+      <!-- Espaçador flexível -->
+      <div class="spacer"></div>
+      <!-- Botões à direita -->
+      <div class="right-buttons">
+        <button routerLink="/" mat-raised-button color="primary" >CADASTRE-SE</button>
+        <button routerLink="/login" mat-stroked-button >LOGIN</button>
+      </div>
+    </div>
+  </mat-toolbar>
+</header>
