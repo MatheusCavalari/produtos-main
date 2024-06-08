@@ -7,18 +7,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './core/material/material.module';
 import { SharedModule } from './shared/header/shared.module';
 import { ProdutoComponent } from './produtos/produto/produto.component';
+import { ProdutoModule } from './produtos/produto/produto.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProdutoComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    ProdutoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
