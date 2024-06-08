@@ -28,16 +28,16 @@
         <div class="grid-container">
           <div class="grid-item">
             <mat-form-field appearance="outline">
-              <mat-label>Data de Nascimento</mat-label>
+              <mat-label>Comunidade</mat-label>
               <input matInput
-                formControlName="nascimento"
-                [matDatepicker]="nascimento"
-                placeholder="Data de Nascimento"
+                formControlName="comunidade"
+                [matDatepicker]="comunidade"
+                placeholder="Comunidade"
               >
-              <mat-datepicker-toggle matSuffix [for]="nascimento"></mat-datepicker-toggle>
-              <mat-datepicker #nascimento></mat-datepicker>
-              <mat-error *ngIf="cadastroForm.get('nascimento')?.errors?.['required']">
-                Data de Nascimento é obrigatória
+              <mat-datepicker-toggle matSuffix [for]="comunidade"></mat-datepicker-toggle>
+              <mat-datepicker #comunidade></mat-datepicker>
+              <mat-error *ngIf="cadastroForm.get('comunidade')?.errors?.['required']">
+                Comunidade é obrigatória
               </mat-error>
             </mat-form-field>
           </div>
