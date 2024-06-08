@@ -8,10 +8,12 @@ import { MaterialModule } from './core/material/material.module';
 import { SharedModule } from './shared/header/shared.module';
 import { ProdutoComponent } from './produtos/produto/produto.component';
 import { ProdutoModule } from './produtos/produto/produto.module';
+import { LoginComponent } from './autenticacao/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
