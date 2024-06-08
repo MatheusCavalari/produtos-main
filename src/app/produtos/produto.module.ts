@@ -6,11 +6,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProdutoComponent } from './produto/produto.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
+import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 
 @NgModule({
   declarations:[
     ProdutoComponent,
-    ProdutoDetalheComponent
+    ProdutoDetalheComponent,
+    CadastroProdutoComponent
 
   ],
   imports: [
@@ -22,7 +24,8 @@ import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.compo
   ],
   exports: [
     ProdutoComponent,
-    ProdutoDetalheComponent
+    ProdutoDetalheComponent,
+    CadastroProdutoComponent
   ]
 })
 
