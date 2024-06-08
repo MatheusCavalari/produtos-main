@@ -17,15 +17,16 @@ export class ProdutoDetalheComponent {
   ) { }
 
   ngOnInit(): void {
-    const cpf = this.route.snapshot.paramMap.get('id');
-    console.log("sssss",cpf);
-    if (cpf !== null) {
-      this.ProdutoService.getClienteById(cpf).subscribe(data => {
+    const id = this.route.snapshot.paramMap.get('id');
+    console.log("sssss",id);
+    if (id !== null) {
+      this.ProdutoService.getProdutoById(id).subscribe(data => {
         this.produto = data;
       });
     } else {
     }
   }
+
 
 
 

@@ -14,13 +14,18 @@
             <mat-card-title><h2>{{ produto.nome }}</h2></mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <p>{{ produto.nome }}</p>
+            <p>{{ produto.descricao }}</p>
           </mat-card-content>
         </mat-card-content>
         <mat-card-actions>
-          <button (click)="verDetalhes(produto.nome)" mat-flat-button color="primary">VER DETALHES</button>
+          <button (click)="verDetalhes(produto.id)" mat-flat-button color="primary">VER DETALHES</button>
         </mat-card-actions>
       </mat-card>
+    </div>
+    <div class="pagination-controls">
+      <button (click)="previousPage()" [disabled]="currentPage === 0">Anterior</button>
+      <span>Página {{ currentPage + 1 }} de {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage >= totalPages - 1">Próximo</button>
     </div>
   </app-container>
 </section>

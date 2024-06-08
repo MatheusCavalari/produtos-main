@@ -28,8 +28,8 @@
     justify-content: space-between;
     row-gap: 16px;
     margin-bottom: 40px;
-
   }
+
   h2 {
     font-size: 32px;
   }
@@ -46,7 +46,7 @@ h1 {
 }
 
 .product-info {
-  background-color: #f28500 ; /* Cor de fundo laranja */
+  background-color: #f28500; /* Cor de fundo laranja */
   padding: 20px;
   text-align: center;
   h2 {
@@ -58,5 +58,38 @@ h1 {
     color: white; /* Cor do texto da descrição */
     font-size: 16px;
     margin-top: 25px; /* Espaço entre o título e a descrição */
+  }
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+
+  button {
+    background-color: #f28500; /* Cor de fundo laranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #d97300; /* Cor de fundo laranja mais escuro */
+    }
+
+    &:disabled {
+      background-color: #cccccc; /* Cor de fundo cinza */
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    font-size: 16px;
+    color: #333;
   }
 }
