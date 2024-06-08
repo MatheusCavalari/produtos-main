@@ -1,6 +1,8 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ClienteService } from '../service/cliente.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +15,8 @@ export class LoginComponent  implements OnInit{
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private clienteService: ClienteService
   ) {}
 
   ngOnInit(): void {
@@ -29,6 +32,20 @@ export class LoginComponent  implements OnInit{
 
     console.log('Erro no login', email);
     console.log('Erro no login', senha);
-  }
+
+    this.clienteService.login(email, senha).subscribe(
+      response => {
+        // Login bem-sucedido, redirecionar para a tela inicial
+        this.router.navigate(['/home']);
+      },
+      (error: HttpErrorResponse) => {
+        if (error.status === 404) {
+          alert('Cliente não encontrado para o email e senha informados');
+        } else {
+          alert('Erro ao processar o login');
+        }
+      }
+    );
+}
 
 }
