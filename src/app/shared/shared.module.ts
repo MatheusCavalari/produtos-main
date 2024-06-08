@@ -4,11 +4,13 @@ import { RouterModule } from "@angular/router";
 import { MaterialModule } from "src/app/core/material/material.module";
 import { HeaderComponent } from "./header/header.component";
 import { ContainerComponent } from "./container/container.component";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    ContainerComponent
+    ContainerComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { ContainerComponent } from "./container/container.component";
   ],
   exports: [
     HeaderComponent,
-    ContainerComponent
+    ContainerComponent,
+    FooterComponent
   ]
 
 })
