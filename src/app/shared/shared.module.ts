@@ -5,12 +5,14 @@ import { MaterialModule } from "src/app/core/material/material.module";
 import { HeaderComponent } from "./header/header.component";
 import { ContainerComponent } from "./container/container.component";
 import { FooterComponent } from './footer/footer.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     ContainerComponent,
-    FooterComponent
+    FooterComponent,
+    BannerComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
   exports: [
     HeaderComponent,
     ContainerComponent,
-    FooterComponent
+    FooterComponent,
+    BannerComponent
   ]
 
 })
