@@ -13,6 +13,7 @@ import { ContainerComponent } from './shared/container/container.component';
 import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProdutoDetalheComponent } from './produtos/produto-detalhe/produto-detalhe.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProdutoDetalheComponent } from './produtos/produto-detalhe/produto-deta
     MaterialModule,
     ProdutoModule,
     AutenticacaoModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
