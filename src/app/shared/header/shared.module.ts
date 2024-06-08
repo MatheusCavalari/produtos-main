@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
-import { MaterialModule } from "src/app/core/material.module";
+import { MaterialModule } from "src/app/core/material/material.module";
 import { HeaderComponent } from "./header.component";
 
 @NgModule({
