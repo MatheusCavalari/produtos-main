@@ -10,11 +10,11 @@ import { ProdutoComponent } from './produtos/produto/produto.component';
 import { ProdutoModule } from './produtos/produto/produto.module';
 import { LoginComponent } from './autenticacao/login/login.component';
 import { ContainerComponent } from './shared/container/container.component';
+import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +22,8 @@ import { ContainerComponent } from './shared/container/container.component';
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
-    ProdutoModule
+    ProdutoModule,
+    AutenticacaoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
