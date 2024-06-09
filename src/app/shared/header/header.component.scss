@@ -43,6 +43,11 @@
     justify-content: space-around; /* Distribuir igualmente os botões em telas menores */
   }
 
+  .center-buttons{
+    width: 100%;
+    justify-content: space-around; /* Distribuir igualmente os botões em telas menores */
+  }
+
   button {
     margin: 4px 0; /* Ajustar margem para telas menores */
   }
