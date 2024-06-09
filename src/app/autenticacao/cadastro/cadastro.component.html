@@ -4,7 +4,7 @@
 ></app-banner>
 <app-container>
   <mat-card>
-    <form [formGroup]="cadastroForm">
+    <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
       <mat-card-title>
         Crie sua conta
       </mat-card-title>
@@ -31,11 +31,8 @@
               <mat-label>Comunidade</mat-label>
               <input matInput
                 formControlName="comunidade"
-                [matDatepicker]="comunidade"
                 placeholder="Comunidade"
               >
-              <mat-datepicker-toggle matSuffix [for]="comunidade"></mat-datepicker-toggle>
-              <mat-datepicker #comunidade></mat-datepicker>
               <mat-error *ngIf="cadastroForm.get('comunidade')?.errors?.['required']">
                 Comunidade é obrigatória
               </mat-error>

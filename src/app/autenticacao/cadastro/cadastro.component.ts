@@ -1,13 +1,15 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FormValidations } from 'src/app/shared/form-validation';
+import { ClienteService } from '../service/cliente.service';
 
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.scss']
 })
-export class CadastroComponent {
+export class CadastroComponent implements OnInit {
   cadastroForm!: FormGroup;
 
   @Input() perfilComponent!: boolean;
@@ -15,19 +17,38 @@ export class CadastroComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-  ) { }
+    private clienteService: ClienteService,
+    private router: Router
+  ) {
+    this.cadastroForm = this.formBuilder.group({
+      nome: ['', Validators.required],
+      comunidade: ['', [Validators.required]],
+      matricula: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      senha: ['', [Validators.required, Validators.minLength(3)]],
+      confirmarEmail: ['', [Validators.required, Validators.email, FormValidations.equalTo('email')]],
+      confirmarSenha: ['', [Validators.required, Validators.minLength(3), FormValidations.equalTo('senha')]]
+    });
+  }
 
   ngOnInit() {
-    this.cadastroForm = this.formBuilder.group({
-      nome: [null, Validators.required],
-      comunidade: [null, [Validators.required]],
-      matricula: [null, [Validators.required]],
-      email: [null, [Validators.required, Validators.email]],
-      senha: [null, [Validators.required, Validators.minLength(3)]],
-      confirmarEmail: [null, [Validators.required, Validators.email, FormValidations.equalTo('email')]],
-      confirmarSenha: [null, [Validators.required, Validators.minLength(3), FormValidations.equalTo('senha')]]
-    });
+  }
 
+  onSubmit(): void {
+    console.log('asad')
+
+    if (this.cadastroForm.valid) {
+      this.clienteService.cadastrarUsuario(this.cadastroForm.value).subscribe(
+        response => {
+          console.log('Usuário cadastrado com sucesso', response);
+          this.router.navigate(['/login']); // Redireciona para a tela de login
+        },
+        error => {
+          console.error('Erro ao cadastrar usuário', error);
+          alert('Erro ao cadastrar usuário. Por favor, tente novamente.');
+        }
+      );
+    }
   }
 
 }
