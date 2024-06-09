@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Produto } from 'src/app/core/material/types/produto';
+import { Produto } from 'src/app/core/types/produto';
 import { environment } from 'src/environments/environment';
 import { PaginatedResponse } from '../produto/produto.component';
 @Injectable({
@@ -26,6 +26,11 @@ export class ProdutoService {
     console.log(
       this.httpClient.get<any>(`${this.apiUrl}/v1/produto/${id}`));
     return this.httpClient.get<any>(`${this.apiUrl}/v1/produto/${id}`);
+  }
+
+
+  cadastrarProduto(produto: Produto): Observable<Produto> {
+    return this.httpClient.post<Produto>(`${this.apiUrl}/v1/produto`, produto);
   }
 
 }
