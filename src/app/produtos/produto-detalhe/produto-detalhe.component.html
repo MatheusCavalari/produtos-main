@@ -2,12 +2,28 @@
   <app-container>
     <div class="product-details">
     <h2>{{ produto.nome }}</h2>
-    <p class="description"><strong>Breve Descrição:</strong> {{ produto.descricaoBreve }}</p>
-    <p class="description"><strong>Descrição Completa:</strong> {{ produto.descricaoCompleta }}</p>
-  <p><strong>Público-alvo:</strong> {{ produto.publicoAlvo }}</p>
-  <p><strong>Maturidade do Produto:</strong> {{ produto.maturidade }}</p>
-  <p><strong>Quantidade de Usuários Ativos:</strong> {{ produto.quantidadeUsuariosAtivos }}</p>
-  <p><strong>Documentação de Consumo:</strong> {{ produto.documetacaoConsumo }}</p>
-</div>
-</app-container>
+    <h2>{{ produto.nome }}</h2>
+      <p class="highlight">{{ produto.descricaoBreve }}</p>
+      <p><strong>Descrição Completa:</strong> {{ produto.descricaoCompleta }}</p>
+      <p><strong>Público-alvo:</strong> {{ produto.publicoAlvo }}</p>
+      <p><strong>Maturidade do Produto:</strong> {{ produto.maturidade }}</p>
+      <p><strong>Quantidade de Usuários Ativos:</strong> {{ produto.quantidadeUsuariosAtivos }}</p>
+      <p><strong>Documentação de Consumo:</strong> {{ produto.documetacaoConsumo }}</p>
+
+      <!-- Botões de compartilhamento -->
+      <div class="share-buttons">
+        <div class="icons">
+          <a [href]="'https://www.instagram.com/?url='" target="_blank">
+            <img src="assets/icones/instagram.png" alt="Compartilhar no Instagram">
+          </a>
+          <a [href]="'https://api.whatsapp.com/send?text='" target="_blank">
+            <img src="assets/icones/whatsapp.png" alt="Compartilhar no WhatsApp">
+          </a>
+          <a [href]="'https://twitter.com/intent/tweet?url='" target="_blank">
+            <img src="assets/icones/twitter.png" alt="Compartilhar no Twitter">
+          </a>
+        </div>
+      </div>
+    </div>
+  </app-container>
 </section>

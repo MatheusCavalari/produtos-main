@@ -4,6 +4,7 @@ import { LoginComponent } from './autenticacao/login/login.component';
 import { CadastroComponent } from './autenticacao/cadastro/cadastro.component';
 import { ProdutoDetalheComponent } from './produtos/produto-detalhe/produto-detalhe.component';
 import { CadastroProdutoComponent } from './produtos/cadastro-produto/cadastro-produto.component';
+import { ProdutoComponent } from './produtos/produto/produto.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'cadastro',
     component: CadastroComponent
+  },
+  {
+    path: 'produtos',
+    component: ProdutoComponent
   },
   {
     path: 'produto-detalhes/:id',
