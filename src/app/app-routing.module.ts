@@ -5,11 +5,16 @@ import { CadastroComponent } from './autenticacao/cadastro/cadastro.component';
 import { ProdutoDetalheComponent } from './produtos/produto-detalhe/produto-detalhe.component';
 import { CadastroProdutoComponent } from './produtos/cadastro-produto/cadastro-produto.component';
 import { ProdutoComponent } from './produtos/produto/produto.component';
+import { HomeComponent } from './home/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent,
+    component: HomeComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
   },
   {
     path: 'login',
