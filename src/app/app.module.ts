@@ -10,6 +10,8 @@ import { ProdutoModule } from './produtos/produto.module';
 import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home/home.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     MaterialModule,
     ProdutoModule,
+    HomeModule,
     AutenticacaoModule,
     ReactiveFormsModule,
     HttpClientModule
