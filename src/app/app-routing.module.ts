@@ -10,27 +10,16 @@ import { HomeComponent } from './home/home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    redirectTo: '/home',
+    pathMatch: 'full'
   },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'auth',
+    loadChildren: () => import('./autenticacao/autenticacao.module').then(m => m.AutenticacaoModule)
   },
   {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
-    path: 'cadastro',
-    component: CadastroComponent
-  },
-  {
-    path: 'produtos',
-    component: ProdutoComponent
-  },
-  {
-    path: 'produto-detalhes/:id',
-    component: ProdutoDetalheComponent
+    path: 'prod',
+    loadChildren: () => import('./produtos/produto.module').then(m => m.ProdutoModule)
   },
   {
     path: 'cadastro-produto',

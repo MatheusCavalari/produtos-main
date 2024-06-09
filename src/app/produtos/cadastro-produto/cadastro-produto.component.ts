@@ -36,7 +36,7 @@ export class CadastroProdutoComponent implements OnInit {
       this.produtoService.cadastrarProduto(this.produtoForm.value).subscribe(
         response => {
           console.log('Produto cadastrado com sucesso', response);
-          this.router.navigate(['/produtos']); // Redireciona para a lista de produtos
+          this.router.navigate(['/prod/produtos']); // Redireciona para a lista de produtos
         },
         error => {
           console.error('Erro ao cadastrar produto', error);

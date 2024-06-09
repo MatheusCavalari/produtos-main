@@ -32,7 +32,7 @@ export class ProdutoComponent implements OnInit {
   }
 
   verDetalhes(id: number): void {
-    this.router.navigate(['/produto-detalhes', id]);
+    this.router.navigate(['/prod/produto-detalhes', id]);
   }
 
   previousPage(): void {

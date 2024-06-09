@@ -36,7 +36,7 @@ export class LoginComponent  implements OnInit{
     this.clienteService.login(email, senha).subscribe(
       response => {
         // Login bem-sucedido, redirecionar para a tela inicial
-        this.router.navigate(['/produtos']);
+        this.router.navigate(['/prod/produtos']);
       },
       (error: HttpErrorResponse) => {
         if (error.status === 404) {
