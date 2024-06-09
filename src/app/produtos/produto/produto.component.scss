@@ -1,0 +1,98 @@
+.card-busca {
+  max-width: 320px;
+  background-color: #FEF7FF;
+  border-radius: 12px;
+  height: 300px;
+  width: 300px;
+  button {
+    width: 100%;
+    margin: 0 16px 48px;
+    background-color: #d97300;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      margin: 12px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 32px;
+      color: #1D1B20;
+      text-align: center;
+    }
+  }
+}
+
+.homepage {
+  .card-wrapper {
+    display: flex;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
+
+h1 {
+  font-size: 36px;
+  padding-top: 50px;
+}
+
+.card-busca {
+  background-color: #aba3a3b9; /* Cor de fundo do card */
+  color: #333; /* Cor do texto */
+}
+
+.product-info {
+  background-color: #f28500; /* Cor de fundo laranja */
+  padding: 20px;
+  text-align: center;
+  h2 {
+    margin-top: 10px; /* Remove a margem superior do título */
+    color: white; /* Cor do texto do título */
+    font-size: 26px;
+  }
+  p {
+    color: white; /* Cor do texto da descrição */
+    font-size: 16px;
+    margin-top: 25px; /* Espaço entre o título e a descrição */
+  }
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+
+  button {
+    background-color: #f28500; /* Cor de fundo laranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #d97300; /* Cor de fundo laranja mais escuro */
+    }
+
+    &:disabled {
+      background-color: #cccccc; /* Cor de fundo cinza */
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    font-size: 16px;
+    color: #333;
+  }
+}

@@ -1,0 +1,54 @@
+.app-header {
+  .mat-toolbar {
+    background-color: black;
+    color: white;
+    padding: 0 16px; /* Ajuste o padding conforme necessário */
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centraliza os itens dentro do contêiner */
+    width: 100%;
+    max-width: 1048px;
+    margin: 0 auto;
+  }
+
+  .left-buttons, .right-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  .spacer {
+    flex: 1; /* Espaçador flexível para empurrar os botões para os lados */
+  }
+
+  button {
+    margin: 0 8px; /* Ajuste a margem conforme necessário */
+  }
+
+  .mat-mdc-outlined-button:not(:disabled) {
+    border-color: white;
+  }
+}
+
+/* Media queries para diferentes tamanhos de tela */
+@media (max-width: 600px) {
+  .app-header .button-container {
+    flex-direction: column; /* Mudar a direção dos itens para coluna em telas menores */
+    padding: 0 8px; /* Ajustar padding para telas menores */
+  }
+
+  .left-buttons, .right-buttons {
+    width: 100%;
+    justify-content: space-around; /* Distribuir igualmente os botões em telas menores */
+  }
+
+  .center-buttons{
+    width: 100%;
+    justify-content: space-around; /* Distribuir igualmente os botões em telas menores */
+  }
+
+  button {
+    margin: 4px 0; /* Ajustar margem para telas menores */
+  }
+}

@@ -1,0 +1,63 @@
+<app-banner
+  src="assets/imagens/banner-cadastro.png"
+  alt="Banner da tela de cadastro de produto"
+></app-banner>
+<app-container>
+  <mat-card>
+    <form [formGroup]="produtoForm" (ngSubmit)="onSubmit()">
+      <mat-card-title>
+        Cadastre um novo produto
+      </mat-card-title>
+      <mat-card-content>
+        <div class="grid-container">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="nome" placeholder="Nome">
+            <mat-error *ngIf="produtoForm.get('nome')?.errors">Nome é obrigatório</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Descrição Breve</mat-label>
+            <input matInput formControlName="descricaoBreve" placeholder="Descrição Breve">
+            <mat-error *ngIf="produtoForm.get('descricaoBreve')?.errors">Descrição Breve é obrigatória</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Descrição Completa</mat-label>
+            <textarea matInput formControlName="descricaoCompleta" placeholder="Descrição Completa"></textarea>
+            <mat-error *ngIf="produtoForm.get('descricaoCompleta')?.errors">Descrição Completa é obrigatória</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Público Alvo</mat-label>
+            <input matInput formControlName="publicoAlvo" placeholder="Público Alvo">
+            <mat-error *ngIf="produtoForm.get('publicoAlvo')?.errors">Público Alvo é obrigatório</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Maturidade</mat-label>
+            <mat-select formControlName="maturidade">
+              <mat-option *ngFor="let opcao of maturidadeOpcoes" [value]="opcao">
+                {{ opcao }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="produtoForm.get('maturidade')?.errors">Maturidade é obrigatória</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Quantidade de Usuários Ativos</mat-label>
+            <input matInput formControlName="quantidadeUsuariosAtivos" type="number" placeholder="Quantidade de Usuários Ativos">
+            <mat-error *ngIf="produtoForm.get('quantidadeUsuariosAtivos')?.errors">Quantidade de Usuários Ativos é obrigatória</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Documentação de Consumo</mat-label>
+            <input matInput formControlName="documetacaoConsumo" placeholder="Documentação de Consumo">
+            <mat-error *ngIf="produtoForm.get('documetacaoConsumo')?.errors">Documentação de Consumo é obrigatória</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="full-width">
+        <button mat-flat-button
+          [disabled]="produtoForm.invalid"
+          color="primary"
+        >CADASTRAR
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</app-container>
