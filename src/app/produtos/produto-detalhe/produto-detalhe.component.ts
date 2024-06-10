@@ -18,7 +18,6 @@ export class ProdutoDetalheComponent {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    console.log("sssss",id);
     if (id !== null) {
       this.ProdutoService.getProdutoById(id).subscribe(data => {
         this.produto = data;

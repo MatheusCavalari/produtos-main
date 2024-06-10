@@ -18,7 +18,6 @@ export class AppComponent implements OnInit {
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
       this.currentRoute = event.urlAfterRedirects;
-      console.log(this.currentRoute);
     });
   }
 }

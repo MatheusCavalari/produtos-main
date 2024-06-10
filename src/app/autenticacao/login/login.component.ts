@@ -30,9 +30,6 @@ export class LoginComponent  implements OnInit{
     const email = this.loginForm.value.email;
     const senha = this.loginForm.value.senha;
 
-    console.log('Erro no login', email);
-    console.log('Erro no login', senha);
-
     this.clienteService.login(email, senha).subscribe(
       response => {
         // Login bem-sucedido, redirecionar para a tela inicial

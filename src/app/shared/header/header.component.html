@@ -3,7 +3,7 @@
     <!-- Container para centralizar os botões -->
     <div class="button-container">
       <!-- Botões à esquerda -->
-      <div class="left-buttons" *ngIf="!['/', '/home', '/login', '/cadastro'].includes(currentRoute)">
+      <div class="left-buttons" *ngIf="!['/', '/home', '/auth/login', '/cadastro'].includes(currentRoute)">
         <button routerLink="/produtos" mat-stroked-button>Produtos</button>
         <button routerLink="/cadastro-produto" mat-stroked-button>Cadastrar Novo Produto</button>
       </div>
@@ -11,8 +11,8 @@
       <div class="spacer"></div>
       <!-- Botões à direita -->
       <div class="right-buttons">
-        <button routerLink="/cadastro" *ngIf="['/', '/home','/login'].includes(currentRoute)" mat-stroked-button >CADASTRE-SE</button>
-        <button routerLink="/login"  *ngIf="['/', '/home','/login', '/cadastro'].includes(currentRoute)" mat-stroked-button >LOGIN</button>
+        <button routerLink="/cadastro" *ngIf="['/', '/home','/auth/login'].includes(currentRoute)" mat-stroked-button >CADASTRE-SE</button>
+        <button routerLink="/login"  *ngIf="['/', '/home','/auth/login', '/cadastro'].includes(currentRoute)" mat-stroked-button >LOGIN</button>
       </div>
       <div class="main-buttons">
         <button routerLink="/home" *ngIf="!['/', '/home'].includes(currentRoute)" mat-stroked-button >MAIN</button>

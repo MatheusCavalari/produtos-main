@@ -7,6 +7,7 @@ import { ProdutoComponent } from './produto/produto.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
+import { ProdutoRoutingModule } from './produto-routing.module';
 
 @NgModule({
   declarations:[
@@ -20,7 +21,8 @@ import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.co
     MaterialModule,
     SharedModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ProdutoRoutingModule
   ],
   exports: [
     ProdutoComponent,
