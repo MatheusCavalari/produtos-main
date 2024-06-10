@@ -35,13 +35,10 @@ export class CadastroComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log('asad')
-
     if (this.cadastroForm.valid) {
       this.clienteService.cadastrarUsuario(this.cadastroForm.value).subscribe(
         response => {
-          console.log('Usuário cadastrado com sucesso', response);
-          this.router.navigate(['/login']); // Redireciona para a tela de login
+          this.router.navigate(['/auth/login']); // Redireciona para a tela de login
         },
         error => {
           console.error('Erro ao cadastrar usuário', error);
