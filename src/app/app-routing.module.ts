@@ -20,10 +20,6 @@ const routes: Routes = [
   {
     path: 'prod',
     loadChildren: () => import('./produtos/produto.module').then(m => m.ProdutoModule)
-  },
-  {
-    path: 'cadastro-produto',
-    component: CadastroProdutoComponent
   }
 ];
 
